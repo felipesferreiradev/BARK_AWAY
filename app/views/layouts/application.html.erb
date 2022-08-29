@@ -11,6 +11,29 @@
   </head>
 
   <body>
+<%# NAVBAR %>
+<nav class="navbar py-4 bg-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i> Bark_Away</a>
+    <form class="w-50 me-3" role="search">
+      <input type="search" class="form-control rounded-pill" placeholder="Search..." aria-label="Search">
+    </form>
+    <div class="dropdown text-end">
+      <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle me-3" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="" alt="mdo" width="32" height="32" class="rounded-circle">
+      </a>
+      <ul class="dropdown-menu text-small" style="">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Bookings</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<%# END NAVBAR %>
     <%= yield %>
   </body>
 </html>
