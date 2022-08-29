@@ -1,0 +1,2 @@
+class DogWalker < ApplicationRecord
+end
