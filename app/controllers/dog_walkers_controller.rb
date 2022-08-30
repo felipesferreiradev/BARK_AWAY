@@ -4,7 +4,6 @@ class DogWalkersController < ApplicationController
   end
 
   def show
-
+    @dog_walker = DogWalker.find(params[:id])
   end
-
 end
