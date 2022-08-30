@@ -1,1 +1,9 @@
 // Specific CSS for your home-page
+.btn{
+  background-color: pink;
+  --bs-btn-border-color: pink;
+  --bs-btn-hover-bg: rgb(255, 161, 177);
+}
+.btn-primary{
+  --bs-btn-hover-border-color: pink;
+}
