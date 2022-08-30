@@ -1,0 +1,10 @@
+<h1>Pick your favorite dog walker!</h1>
+
+<% @dog_walkers.each do |dog_walker| %>
+  <ul>
+    <li>name: <%= dog_walker.full_name %>,
+        city: <%= dog_walker.city %>,
+        price: <%= dog_walker.price %>,
+    </li>
+  </ul>
+<% end %>
