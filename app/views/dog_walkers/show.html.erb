@@ -1,11 +1,14 @@
 
-<div class="container text-center mt-5">
-  <div class="row g-2">
-      <div class="card col-4 mx-2">
-        <img src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text"> <%= @dog_walker.user.full_name %> <br> <button type="button" class="btn btn-primary btn-sm">Book me</button> </p>
-        </div>
-      </div>
+<div class="media mt-5">
+  <img class="align-self-start mr-3" src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=6" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0"><%= @dog_walker.user.full_name %></h5>
+        <i class="fa-solid fa-location-dot"></i><%= @dog_walker.user.city%>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <i class="fa-solid fa-money-check-dollar"></i><%= @dog_walker.price %>
+    <button type="button" class="btn btn-primary btn-sm">Book me</button>
+
+
   </div>
 </div>

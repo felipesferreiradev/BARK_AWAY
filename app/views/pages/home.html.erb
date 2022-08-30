@@ -5,10 +5,10 @@
 <div class="container text-center mt-5">
   <div class="row g-2">
     <% @dog_walkers.each do |dog_walk| %>
-      <div class="card col-4 mx-2">
+      <div class="card col-2 mx-2">
         <img src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text"> <%= dog_walk.user.full_name %> <br> <button type="button" class="btn btn-primary btn-sm">
+          <p class="card-text"> <%= dog_walk.user.full_name.capitalize %> <br> <button type="button" class="btn btn-primary btn-sm">
           <%= link_to dog_walker_path(dog_walk) do %> Visit profile</button>
           </p>
           <% end %>
