@@ -2,8 +2,8 @@
 
 <% @dog_walkers.each do |dog_walker| %>
   <ul>
-    <li>name: <%= dog_walker.full_name %>,
-        city: <%= dog_walker.city %>,
+    <li>name: <%= dog_walker.user.full_name %>,
+        city: <%= dog_walker.user.city %>,
         price: <%= dog_walker.price %>,
     </li>
   </ul>
