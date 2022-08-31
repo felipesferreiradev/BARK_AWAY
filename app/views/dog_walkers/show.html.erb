@@ -1,14 +1,23 @@
 
-<div class="media mt-5">
-  <img class="align-self-start mr-3" src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=6" alt="Generic placeholder image">
-  <div class="media-body">
-    <h5 class="mt-0"><%= @dog_walker.user.full_name %></h5>
-        <i class="fa-solid fa-location-dot"></i><%= @dog_walker.user.city%>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-    <i class="fa-solid fa-money-check-dollar"></i><%= @dog_walker.price %>
-    <button type="button" class="btn btn-primary btn-sm">Book me</button>
-
-
+<section class="container py-5">
+  <div class="row align-items-center py-3 py-md-4">
+    <div class="col-sm-6">
+      <div class="mb-5 mb-sm-0 text-center text-sm-start">
+        <div class="radio-tab-pane active" id="color-1" role="tabpanel"><img class="d-block mx-auto" src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Profile-picture"></div>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center text-sm-start">
+      <h2 class="pb-4" id = "about-me-title">About me</h2>
+      <div class="mb-3"><span class="fs-sm text-heading fw-medium me-1" id="walker-name">
+      <%= @dog_walker.user.full_name %></span>
+      </div>
+      <p id= "about-me-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos nisi dolores quia vitae suscipit recusandae</p>
+      <ul class="nav col-md-4 list-unstyled d-flex">
+        <li class="ms-1"><a class="text-muted" href="#"><i class="fa-solid fa-location-dot"></i><%= @dog_walker.user.city%></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-solid fa-dollar-sign"></i><%= @dog_walker.price %></a></li>
+      </ul>
+      <a class="btn btn-primary mt-3" href="#">Let me walk you</a>
+    </div>
+    </div>
   </div>
-</div>
+</section>
