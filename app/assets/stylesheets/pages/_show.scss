@@ -1,10 +1,32 @@
-img.align-self-start.mr-3{
-  height: 200px;
-  width: 200px;
+.btn {
+background-color: #5BA698;
+border-color: #5BA698;
+
 }
-.media{
-  text-align: center;
+
+.btn {
+--bs-btn-hover-bg: #5BA698;
+--bs-btn-hover-border-color: #5BA698;
+--bs-btn-active-bg: #5BA698;
+--bs-btn-active-border-color: #5BA698;
 }
-.fa-solid{
- padding: 8px;
+
+
+
+
+#about-me-title {
+color: grey;
+font-weight: 600;
+font-size: 36px;
+}
+
+#walker-name {
+  color: grey;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#about-me-content {
+  color: grey;
+  font-weight: 500;
 }
