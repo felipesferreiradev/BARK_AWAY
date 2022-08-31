@@ -21,10 +21,17 @@ font-size: 36px;
 #walker-name {
   color: grey;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #about-me-content {
   color: grey;
   font-weight: 500;
+}
+
+.fa-location-dot,
+.fa-dollar-sign,
+.walker-city,
+.walker-price {
+  color: grey;
 }

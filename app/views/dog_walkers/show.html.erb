@@ -13,10 +13,9 @@
       </div>
       <p id= "about-me-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos nisi dolores quia vitae suscipit recusandae</p>
       <ul class="nav col-md-4 list-unstyled d-flex">
-        <li class="ms-1"><a class="text-muted" href="#"><i class="fa-solid fa-location-dot"></i><%= @dog_walker.user.city%></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-solid fa-dollar-sign"></i><%= @dog_walker.price %></a></li>
+        <li class="walker-city ms-1"><i class="fa-solid fa-location-dot"></i><%= @dog_walker.user.city%></li>
+        <li class="walker-price ms-3"><i class="fa-solid fa-dollar-sign"></i><%= @dog_walker.price %>/h</li>
       </ul>
-      <%# <a class="btn btn-primary mt-3" href="#">Book</a> %>
       <%= link_to "Book", new_dog_walker_booking_path(@dog_walker), class: "btn btn-primary mt-3"%>
     </div>
     </div>
