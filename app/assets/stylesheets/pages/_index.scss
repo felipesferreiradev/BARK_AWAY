@@ -1,4 +1,28 @@
 // Import page-specific CSS files here.
-@import "home";
 @import "show";
-@import "new";
+
+.row {
+  justify-content: space-evenly;
+}
+
+.card-img-top {
+  border-radius: 3px;
+}
+
+.card-text {
+  font-style: oblique;
+  color: grey;
+}
+
+.card-title {
+  color: grey;
+  font-weight: 600;
+}
+
+.link-to-dog-walker a {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(91, 166, 152, 0.9);
+  padding: 8px;
+  border-radius: 3px;
+}
