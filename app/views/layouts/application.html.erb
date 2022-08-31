@@ -14,7 +14,11 @@
   <%# NAVBAR %>
 <nav class="navbar py-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i> Bark_Away</a>
+  <div id="bark-away-link">
+    <a><%= link_to root_path do %>
+    <i class="fa-solid fa-paw"></i> Bark_Away</a>
+    <% end %>
+  </div>
     <form class="w-50 me-3" role="search">
       <input type="search" class="form-control rounded-pill" placeholder="Search..." aria-label="Search">
     </form>
