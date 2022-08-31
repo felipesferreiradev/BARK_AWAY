@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first
-felipe = User.new(full_name: "Felipe", email: "felipe@felipe.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire")
-silvia = User.new(full_name: "silvia", email: "silvia@felipe.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire")
-sara = User.new(full_name: "sara", email: "sara@felipe.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire")
-hao = User.new(full_name: "Hao", email: "hao@felipe.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire")
+felipe = User.new(full_name: "Felipe", email: "felipe@yay.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire", picture: "https://images.unsplash.com/photo-1611601303737-6496949997cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nJTIwd2Fsa2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+silvia = User.new(full_name: "silvia", email: "silvia@ole.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire", picture: "https://images.unsplash.com/photo-1540544515-75496d8e03e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
+sara = User.new(full_name: "sara", email: "sara@why.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire", picture: "https://images.unsplash.com/photo-1524549028671-c64980386279?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGRvZyUyMHdhbGtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")
+hao = User.new(full_name: "Hao", email: "hao@yep.com", password: "123456", city: "Berlin", dog_breed: "Yorkshire", picture: "https://images.unsplash.com/photo-1656775872645-a8157357f540?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM0fHxkb2clMjB3YWxrZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60")
 
 felipe.save!
 silvia.save!
