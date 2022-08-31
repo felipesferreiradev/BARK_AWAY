@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   display:flex;
 }
 
@@ -19,10 +19,6 @@
   filter: brightness(60%);
 }
 
-.hero-content{
-  position:relative;
-}
-
-.hero h1, h5 {
+h1, h5 {
   color:white;
 }
