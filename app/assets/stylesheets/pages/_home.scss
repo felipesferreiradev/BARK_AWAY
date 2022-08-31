@@ -19,6 +19,26 @@
   filter: brightness(60%);
 }
 
-h1, h5 {
-  color:white;
+h1 {
+  color: #BF522A;
+  font-weight: 800;
+  padding: 20px;
+}
+
+h5 {
+  color: gray;
+  text-align: center;
+  padding: 20px;
+}
+
+p {
+  padding: 20px;
+}
+
+.hero-link a {
+  background-color: rgba(91, 166, 152, 0.9);
+  border-radius: 3px;
+  padding: 16px;
+  text-decoration: none;
+  color: #fff;
 }
