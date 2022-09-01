@@ -23,11 +23,9 @@ class DogWalkersController < ApplicationController
     end
   end
 
-
   def destroy
     @dog_walker = DogWalker.find(params[:id])
     @dog_walker.destroy
-
   end
 
   private
