@@ -13,13 +13,16 @@ User.destroy_all
       city: Faker::Address.city,
       dog_breed: Faker::Creature::Dog.breed,
       picture: "",
-      password: "123456",
-      password_confirmation: "123456",
+      password: "123456"
   )
 end
-users = User.all.sample (6)
-users.each do | user |
-  DogWalker.create(
-    price: rand(10..50), user: user
+users = User.all.sample(6)
+users.each do |user|
+  dog_walker = DogWalker.new(
+    price: rand(10..50),
+    user: user
   )
+  file = File.open("dog_walker_bath.jpeg")
+  dog_walker.photo.attach(io: file, filename: "dog_walker_bath.jpeg", content_type: 'image/jpeg')
+  dog_walker.save!
 end
