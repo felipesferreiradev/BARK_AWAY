@@ -3,7 +3,7 @@
   <div class="row align-items-center py-3 py-md-4">
     <div class="col-sm-6">
       <div class="mb-5 mb-sm-0 text-center text-sm-start">
-        <div class="dog-walker-pic" <%= cl_image_tag current_user.photo.key %> ></div>
+        <div class="dog-walker-pic"> <%= cl_image_tag @dog_walker.photo.key, height: 300, width: 400, crop: :fill  %> </div>
       </div>
     </div>
     <div class="col-sm-6 text-center text-sm-start">

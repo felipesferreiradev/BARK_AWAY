@@ -1,4 +1,4 @@
-<h1 class="blue_header">All your bookings</h1>
+<h1 class="blue_header">Hi, <%=current_user.full_name.downcase%>, these are all your bookings</h1>
 <div class="d-flex justify-content-center flex-column">
 
 <% current_user.bookings.each do|booking| %>

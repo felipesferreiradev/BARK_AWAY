@@ -298,7 +298,8 @@ Devise.setup do |config|
 
   # ==> Turbolinks configuration
   # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:
-  #
+  #config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
