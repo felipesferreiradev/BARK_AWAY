@@ -1,8 +1,8 @@
 <div class="container text-center mt-5">
   <div class="row g-2">
     <% @dog_walkers.each do |dog_walk| %>
-      <div class="col-2 mx-2 mb-5 px-5">
-        <%= cl_image_tag dog_walk.photo.key :class => "card-img-top" %>
+      <div class="cards-img col-2 mx-2 mb-5">
+        <%= cl_image_tag dog_walk.photo.key, :class => "card-img-top" %>
         <div class="card-body">
         <h6 class="card-title text-start pt-2"><%= dog_walk.user.full_name.capitalize %></h6>
           <p class="card-text text-start pt-2"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
