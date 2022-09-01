@@ -23,7 +23,7 @@
         <form class="w-50 me-3" role="search">
           <input type="search" class="form-control rounded-pill" placeholder="Search..." aria-label="Search">
         </form>
-
+        <%= button_to "Home", root_path, method: :get, class: "dropdown-item" %>
         <%= button_to "Sign in", new_user_session_path, data: {turbo_method: :get}, method: :get, class: "dropdown-item" %>
         <%= button_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, method: :delete, class: "dropdown-item" %>
 

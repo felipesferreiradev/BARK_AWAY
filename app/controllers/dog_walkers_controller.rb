@@ -1,5 +1,5 @@
 class DogWalkersController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   def index
     @dog_walkers = DogWalker.all
@@ -21,6 +21,13 @@ class DogWalkersController < ApplicationController
     else
       render "dog_walkers/new", status: :unprocessable_entity
     end
+  end
+
+
+  def destroy
+    @dog_walker = DogWalker.find(params[:id])
+    @dog_walker.destroy
+
   end
 
   private
