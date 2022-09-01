@@ -16,11 +16,19 @@ User.destroy_all
       password: "123456"
   )
 end
+
 users = User.all.sample(6)
 users.each do |user|
   dog_walker = DogWalker.new(
     price: rand(10..50),
     user: user
+=======
+users = User.all.sample (6)
+users.each do | user |
+  DogWalker.create(
+    price: rand(10..50), user: user,
+    description: Faker::TvShows::RickAndMorty.quote,
+
   )
   file = File.open("dog_walker_bath.jpeg")
   dog_walker.photo.attach(io: file, filename: "dog_walker_bath.jpeg", content_type: 'image/jpeg')
