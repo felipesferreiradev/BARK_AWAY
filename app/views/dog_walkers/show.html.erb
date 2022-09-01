@@ -16,9 +16,12 @@
         <li class="walker-city ms-1"><i class="fa-solid fa-location-dot"></i><%= @dog_walker.user.city%></li>
         <li class="walker-price ms-3"><i class="fa-solid fa-dollar-sign"></i><%= @dog_walker.price %>/h</li>
       </ul>
+      <div class="d-flex align-content-center">
       <%= link_to "Book", new_dog_walker_booking_path(@dog_walker), class: "btn btn-primary mt-3"%>
       <%= link_to "Back", dog_walkers_path, class: "btn btn-primary mt-3"%>
-      <%= link_to "delete", dog_walker_path(@dog_walker), method: :delete, class: "btn btn-primary mt-3"%>
+      <%= button_to "delete", dog_walker_path(@dog_walker), data: {turbo_method: :delete}, method: :delete, class: "btn btn-primary bg-danger text-white mt-3"%>
+
+      </div>
 
     </div>
     </div>
