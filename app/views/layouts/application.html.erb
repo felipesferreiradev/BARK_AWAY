@@ -5,41 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true%>
+
   </head>
 
   <body>
   <%# NAVBAR %>
-<nav class="navbar py-4">
-  <div class="container-fluid">
-  <div id="bark-away-link">
-    <a><%= link_to root_path do %>
-    <i class="fa-solid fa-paw"></i> Bark_Away</a>
-    <% end %>
-  </div>
-    <form class="w-50 me-3" role="search">
-      <input type="search" class="form-control rounded-pill" placeholder="Search..." aria-label="Search">
-    </form>
-    <div class="dropdown text-end">
-      <div class="avatar">
-        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle me-3" data-bs-toggle="dropdown" aria-expanded="false">
-        <%= image_tag "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" %>
-        </a>
+    <nav class="navbar py-4">
+      <div class="container-fluid">
+      <div id="bark-away-link">
+        <a><%= link_to root_path do %>
+        <i class="fa-solid fa-paw"></i> Bark_Away</a>
+        <% end %>
       </div>
-      <ul class="dropdown-menu text-small" style="">
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><a class="dropdown-item" href="#">Bookings</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+        <form class="w-50 me-3" role="search">
+          <input type="search" class="form-control rounded-pill" placeholder="Search..." aria-label="Search">
+        </form>
+        <%= button_to "Sign in", new_user_session_path, data: {turbo_method: :get}, method: :get, class: "dropdown-item" %>
+        <%= button_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, method: :delete, class: "dropdown-item" %>
+
+        <div class="dropdown text-end">
+          <div class="avatar">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle me-3" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= image_tag "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" %>
+            </a>
+          </div>
+
+          <ul class="dropdown-menu text-small" style="">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Bookings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 <%# END NAVBAR %>
+
 <%= yield %>
-<%# FOOTER %>
+
 <% if notice %>
   <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
     <%= notice %>
@@ -54,7 +60,8 @@
     </button>
   </div>
 <% end %>
-<body class="d-flex flex-column min-vh-100">
+
+    <%# FOOTER %>
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-auto border-top">
     <div class="col-md-4 d-flex justify-content-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -68,8 +75,8 @@
       <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram"></i></a></li>
     </ul>
   </footer>
-  </body>
-<%# END FOOTER %>
+
+    <%# END FOOTER %>
 
   </body>
 </html>

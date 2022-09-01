@@ -1,0 +1,41 @@
+
+<div class="container booking">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1 class="pt-5">Welcome to become a new dog walker</h1>
+
+      <div class="form-group">
+      <label>Name</label>
+      <br><%= @dog_walker.user.full_name%>
+      </div>
+
+      <div class="form-group">
+      <label>Email address</label>
+      <br><%= @dog_walker.user.email%>
+      </div>
+
+
+      <div class="form-group">
+      <label>City</label>
+      <br><%= @dog_walker.user.city%>
+      </div>
+
+      <div class="form-group">
+      <label>Your dog's breed?</label>
+      <br><%= @dog_walker.user.dog_breed%>
+      </div>
+
+      <div class="form-group">
+      <%= simple_form_for @dog_walker do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <%= f.input :price, label:'What is your expected price of waling a dog?' %>
+        <%= f.input :photo, as: :file %>
+
+        <%= f.submit 'Become a dog walker!', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>
