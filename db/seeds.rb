@@ -50,6 +50,7 @@ end
 users = User.all.sample (6)
 users.each do | user |
   DogWalker.create(
-    price: rand(10..50), user: user
+    price: rand(10..50), user: user,
+    description: Faker::TvShows::RickAndMorty.quote,
   )
 end
