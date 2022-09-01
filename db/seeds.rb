@@ -44,9 +44,10 @@ User.destroy_all
       dog_breed: Faker::Creature::Dog.breed,
       picture: "",
       password: "123456",
-      password_confirmation: "123456",
-  )
+      password_confirmation: "123456"
+    )
 end
+
 users = User.all.sample (6)
 users.each do | user |
   DogWalker.create(
