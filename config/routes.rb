@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :dog_walkers, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:index, :new, :create, :show, :destroy]
   end
+  get "/dashboard", to: "pages#dashboard"
 end
