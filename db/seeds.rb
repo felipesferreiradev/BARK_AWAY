@@ -5,7 +5,7 @@ require "faker"
 DogWalker.destroy_all
 User.destroy_all
 
-
+cities = [Berlin, London, Barcelona]
 10.times do
   User.create!(
       full_name: Faker::Name.name,
