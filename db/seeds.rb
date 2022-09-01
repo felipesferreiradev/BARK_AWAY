@@ -10,6 +10,7 @@ User.destroy_all
       email: Faker::Internet.email,
       city: Faker::Address.city,
       dog_breed: Faker::Creature::Dog.breed,
+      picture: "",
       password: "123456",
       password_confirmation: "123456"
     )
