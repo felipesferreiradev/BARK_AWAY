@@ -1,47 +1,42 @@
 <div class="container booking">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Create a new booking</h1>
+      <h1 class="pt-5">Create a new booking</h1>
+      <div class="form-group">
+      <label for="exampleInputName">Name</label>
+      <input type="name" class="form-control" id="exampleInputName"  placeholder="Your name">
+      </div>
 
-    <div class="form-group">
-    <label for="exampleInputName">Name</label>
-    <input type="name" class="form-control" id="exampleInputName"  placeholder="Your name">
+      <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+
+      <div class="form-group">
+      <label for="exampleInputAddress">Address</label>
+      <input type="adress" class="form-control" id="exampleInputAddress"  placeholder="Enter your address">
+      </div>
+
+
+      <div class="form-group">
+      <label for="exampleInputDogBreed">DogBreed</label>
+      <input type="dog_breed" class="form-control" id="exampleInputDogBreed"  placeholder="Enter your dog breed">
+      </div>
+
+
+      <div class = "form-group">
+        <%= simple_form_for [@dog_walker, @booking] do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+          <%= f.input :date %>
+          <%= f.input :notes %>
+          <%= f.input :confirmed %>
+
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
     </div>
-
-    <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-
-    <div class="form-group">
-    <label for="exampleInputAddress">Address</label>
-    <input type="adress" class="form-control" id="exampleInputAddress"  placeholder="Enter your address">
-    </div>
-
-
-    <div class="form-group">
-    <label for="exampleInputDogBreed">DogBreed</label>
-    <input type="dog_breed" class="form-control" id="exampleInputDogBreed"  placeholder="Enter your dog breed">
-    </div>
-
-    <div class="form-group">
-    <label for="exampleInputNotes">Notes</label>
-    <input type="notes" class="form-control" id="exampleInputNotes"  placeholder="Enter your notes">
-    </div>
-
-    <div class = "form-group">
-      <%= simple_form_for [@dog_walker, @booking] do |f| %>
-        <%= f.error_notification %>
-        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-        <%= f.input :date %>
-        <%= f.input :confirmed %>
-
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
-    </div>
-
-
   </div>
 </div>
