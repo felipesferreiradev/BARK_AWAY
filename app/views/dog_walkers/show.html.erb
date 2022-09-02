@@ -11,7 +11,7 @@
       <div class="mb-3"><span class="fs-sm text-heading fw-medium me-1" id="walker-name">
       <%= @dog_walker.user.full_name.capitalize %></span>
       </div>
-      <p id= "about-me-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos nisi dolores quia vitae suscipit recusandae</p>
+      <p id= "about-me-content"><%= @dog_walker.description%></p>
       <ul class="nav col-md-4 list-unstyled d-flex">
         <li class="walker-city ms-1"><i class="fa-solid fa-location-dot"></i> <%= @dog_walker.user.city%></li>
         <li class="walker-price ms-3"><i class="fa-solid fa-dollar-sign"></i> <%= @dog_walker.price %>/h</li>
