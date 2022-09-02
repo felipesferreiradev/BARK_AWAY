@@ -2,7 +2,7 @@
 <div class="container dog_walker">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1 class="pt-5">Welcome to become a new dog walker</h1>
+      <h1 class="pt-5"> Become a dog walker</h1>
     <p class="p-0 text-secondary">  *Please check the following information carefully. If something's wrong, please <%= link_to "update your profile",edit_user_registration_path, class:"btn-light"  %>*</p>
 
       <div class="form-group d-flex gap-3 mb-3">
@@ -32,7 +32,7 @@
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-        <%= f.input :price, label:'What is your expected price of waling a dog?' %>
+        <%= f.input :price, label:'What is your expected price of walking a dog?' %>
         <%= f.input :photo, label: "Uploade a picture to show yourself!",as: :file %>
 
         <%= f.submit 'Become a dog walker!', class: 'btn btn-primary' %>
