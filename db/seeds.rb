@@ -49,7 +49,7 @@ dog_walker_1 = DogWalker.new(
   description: "A fast paced walk throught out london's green parks",
   user_id: silvia.id
 )
-walk_in_woods = URI.open('dog_walker_woods.jpeg')
+walk_in_woods = File.open('dog_walker_woods.jpeg')
 dog_walker_1.photo.attach(io: walk_in_woods, filename: 'dog_walker_woods.jpeg', content_type: 'image/jpeg')
 dog_walker_1.save!
 
@@ -59,7 +59,7 @@ dog_walker_2 = DogWalker.new(
   description: "A amazing walk, at the beach, follow by a warm shower",
   user_id: sara.id
 )
-walk_at_beach = URI.open('dog_walker_bath.jpeg')
+walk_at_beach = File.open('dog_walker_bath.jpeg')
 dog_walker_2.photo.attach(io: walk_at_beach, filename: 'dog_walker_bath.jpeg', content_type: 'image/jpeg')
 dog_walker_2.save!
 
@@ -68,7 +68,7 @@ dog_walker_3 = DogWalker.new(
   description: "Nothing like a skate-walk, for a good leg stretch",
   user_id: silvia.id
 )
-walk_in_skate = URI.open('dog_walker_skater.jpeg')
+walk_in_skate = File.open('dog_walker_skater.jpeg')
 dog_walker_3.photo.attach(io: walk_in_skate, filename: 'dog_walker_skater.jpeg', content_type: 'image/jpeg')
 dog_walker_3.save!
 
@@ -77,7 +77,7 @@ dog_walker_4 = DogWalker.new(
   description: "If you like walks, pinacoladas and sunsets at the beach",
   user_id: hao.id
 )
-walk_in_sunsets = URI.open('dog_walker_beach_run.jpeg')
+walk_in_sunsets = File.open('dog_walker_beach_run.jpeg')
 dog_walker_4.photo.attach(io: walk_in_sunsets, filename: 'dog_walker_beach_run.jpeg', content_type: 'image/jpeg')
 dog_walker_4.save!
 
@@ -86,7 +86,7 @@ dog_walker_5 = DogWalker.new(
   description: "Need to work on your doggie glutes? nothing like a hike!",
   user_id: hao.id
 )
-walk_up_hike = URI.open('dog_walker_hike.jpeg')
+walk_up_hike = File.open('dog_walker_hike.jpeg')
 dog_walker_5.photo.attach(io: walk_up_hike, filename: 'dog_walker_hike.jpeg', content_type: 'image/jpeg')
 dog_walker_5.save!
 
@@ -95,7 +95,7 @@ dog_walker_6 = DogWalker.new(
   description: "The walk that follows, Hollywood sunsets",
   user_id: sara.id
 )
-walk_in_hollywood = URI.open('dog_walker_hollywood.jpeg')
+walk_in_hollywood = File.open('dog_walker_hollywood.jpeg')
 dog_walker_6.photo.attach(io: walk_in_hollywood, filename: 'dog_walker_hollywood.jpeg', content_type: 'image/jpeg')
 dog_walker_6.save!
 

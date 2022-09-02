@@ -32,7 +32,7 @@ class DogWalkersController < ApplicationController
   private
 
   def dog_walker_params
-    params.require(:dog_walker).permit(:dog_walker_id, :price, :confirmed, :photo,:user_id)
+    params.require(:dog_walker).permit(:dog_walker_id, :price, :confirmed, :photo, :user_id)
   end
 
 end

@@ -3,7 +3,7 @@
   <div class="row align-items-center  py-3 py-md-4">
     <div class="col-sm-6">
       <div class="mb-5 mb-sm-0 text-center text-sm-start">
-        <div class="dog-walker-pic"> <%= cl_image_tag @dog_walker.photo.key, height: 300, width: 400, crop: :fill  %> </div>
+        <div class="dog-walker-pic"> <%= cl_image_tag @dog_walker.photo.key, height: 300, width: 400, crop: :fill %> </div>
       </div>
     </div>
     <div class="col-sm-6 text-center text-sm-start ">
@@ -21,9 +21,8 @@
       <%= link_to "Back", dog_walkers_path, class: "back-btn mt-3 me-3"%>
       </div>
       <%if @dog_walker.user == current_user%>
-      <br><%= button_to "Delete", dog_walker_path(@dog_walker), data: {turbo_method: :delete}, method: :delete, id: "new-delete", class:"d-flex align-content-center pl-5"%>
+      <%= button_to "Delete", dog_walker_path(@dog_walker), method: :delete, id: "new-delete", class:"delete-btn mt-3 me-3"%>
       <%end%>
-
     </div>
     </div>
   </div>
