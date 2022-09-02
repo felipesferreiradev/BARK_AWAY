@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :email, :dog_breed, :city, :full_name, presence: true
   has_many :bookings
   has_many :dog_walkers
+  has_one_attached :photo
 end
