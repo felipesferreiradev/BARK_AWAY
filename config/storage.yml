@@ -10,6 +10,13 @@ local:
 cloudinary:
   service: Cloudinary
   folder: <%= Rails.env %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  channel_prefix: BARK_AWAY_production
+  cloud_name: "wanghaoooo"
+  api_key: "185152778299594"
+  api_secret: "aUEcCLkollvm-AGMzhXmAz8nr-s"
+  secure: true
+
 
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
