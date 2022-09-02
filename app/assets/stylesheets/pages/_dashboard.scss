@@ -1,6 +1,19 @@
-.blue_header {
+.blue_header, h2 {
   color: #5ba698;
   font-weight: 800;
   padding-top: 24px;
   text-align: center;
+}
+
+.booking-card {
+  margin-top: 25px;
+}
+
+.booking-card-text {
+padding: 10px;
+}
+
+.booking-card-text span {
+  font-weight: 600;
+  font-size: 16px;
 }

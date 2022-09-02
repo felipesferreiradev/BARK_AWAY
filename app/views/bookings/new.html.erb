@@ -1,7 +1,11 @@
 <div class="container booking">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+<<<<<<< HEAD
     <h1 class="pt-5">Hi <%=current_user.full_name%><br></h1>
+=======
+    <h1 class="pt-5">Hi <%=current_user.full_name%>
+>>>>>>> 4c6909ad5135c097d2e8df5dbd458aeede007c54
     <p class="p-0 text-secondary">  *Please check the following information carefully. If something's wrong, please <%= link_to "update your profile",edit_user_registration_path, class:"btn-light"  %>*</p>
 
       <div class="form-group d-flex gap-3">
@@ -13,22 +17,22 @@
 
       <div class="form-group d-flex gap-3">
       <div>
-      <label>Your name</label>
+      <label>Tell me your name</label>
       <br><input style="width:200px" type="text" value="<%= current_user.full_name%>" disabled>
       </div>
       <div>
-      <label>Email</label>
+      <label>What about your email?</label>
       <br><input style="width:250px" type="email" value="<%= current_user.email%>" disabled>
       </div>
       </div>
 
       <div class="form-group d-flex gap-3">
         <div>
-          <label>You live in</label>
+          <label>Where canI find you? </label>
           <br><input style="width:200px" type="text" value="<%= current_user.city%>" disabled>
         </div>
         <div>
-          <label>Your dog's breed is</label>
+          <label>Your fur friend breed is</label>
           <br><input style="width:200px" type="text" value="<%= current_user.dog_breed%>" disabled>
         </div>
       </div>
