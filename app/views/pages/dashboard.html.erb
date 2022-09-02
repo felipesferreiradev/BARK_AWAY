@@ -1,13 +1,16 @@
-<h1 class="blue_header">Hi, <%=current_user.full_name.downcase%>, these are all your bookings</h1>
+<h1 class="blue_header">Hi <%=current_user.full_name.capitalize%>,</h1>
+<h2>these are all your bookings</h2>
 <div class="d-flex justify-content-center flex-column">
 
 <% current_user.bookings.each do|booking| %>
 
-<div class="card w-50 align-self-center ">
+<div class="booking-card card w-50 align-self-center ">
   <div class="card-body">
     <h5 class="card-title">Booking information</h5>
-    <p class="card-text">Name:<%= booking.user.full_name.capitalize %>, Date: <%= booking.date %>, Confirmation:<%= booking.confirmed %></p>
-    <p class="card-text"><small class="text-muted">Created on: <%= booking.created_at %></small></p>
+    <hr>
+    <p class="card-text booking-card-text"> <span>Name:</span>  <%= booking.user.full_name.capitalize %></p>
+    <p class="card-text booking-card-text"><span>Date:</span>  <%= booking.date %></p>
+    <p class="card-text booking-card-text"><span>Confirmation:</span>  <%= booking.confirmed %></p>
   </div>
 </div>
 
