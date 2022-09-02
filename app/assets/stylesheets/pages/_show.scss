@@ -10,6 +10,16 @@ border-color: #5BA698;
 --bs-btn-active-border-color: #5BA698;
 }
 
+.delete-btn, .back-btn {
+color: #BF522A;
+display: flex;
+align-items: end;
+
+}
+
+.back-btn {
+  color:#5BA698;
+}
 
 #about-me-title {
 color: grey;
