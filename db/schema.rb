@@ -49,6 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_133412) do
     t.boolean "confirmed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "notes"
     t.index ["dog_walker_id"], name: "index_bookings_on_dog_walker_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

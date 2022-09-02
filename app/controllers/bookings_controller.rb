@@ -21,8 +21,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     # raise
     if @booking.save
-      redirect_to  dog_walker_booking_path(@dog_walker, @booking), notice: "Your Dog Walk has been booked!"
-
+      redirect_to dog_walker_booking_path(@dog_walker, @booking), notice: "Your Dog Walk has been booked!"
     else
       render "bookings/new", status: :unprocessable_entity
     end
@@ -30,6 +29,11 @@ class BookingsController < ApplicationController
 
   def find_bookings
     @bookings = Booking.where(user: current_user)
+  end
+
+  def destroy
+  @booking = Booking.find(params[:id])
+  @booking.destroy
   end
 
   private

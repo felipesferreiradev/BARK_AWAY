@@ -3,14 +3,12 @@
   </div>
 </section>
 <div class="container hero-titles">
-        <h1 class="hero-title">Bark_Away</h1>
+        <h1 class="hero-title"><i class="fa-solid fa-paw"></i> Bark_Away</h1>
         <h5 class="hero-subtitle">The website that takes your doggo for the most excited adventure,
         <br> wonder of smells, blind dates
         <br> and interactions with other fur local species (like Mr.Squirrel)</h5>
-        <p class="hero-link "><%= link_to dog_walkers_path do  %>
-        See dog walkers</button>
-        <% end %>
-        </p>
+        <%= link_to "See dog walkers", dog_walkers_path, class: "btn btn-primary" %>
+        <%= link_to "Become a dog walker", new_dog_walker_path, class: "btn btn-primary" %>
       </div>
     </div>
 </div>

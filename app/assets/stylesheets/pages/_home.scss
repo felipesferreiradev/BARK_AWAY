@@ -29,20 +29,27 @@ h1 {
   padding-top: 120px;
 }
 
+h1 .fa-paw {
+  font-size: 62px;
+}
+
 h5 {
   color: gray;
   text-align: center;
   padding: 40px;
+  line-height: 32px;
+  letter-spacing: 2px;
 }
 
 p {
   padding: 20px;
 }
 
-.hero-link a {
+.btn-primary {
   background-color: rgba(91, 166, 152, 0.9);
   border-radius: 3px;
   padding: 16px;
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
 }
