@@ -2,7 +2,18 @@ class DogWalkersController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @dog_walkers = DogWalker.all
+    if params[:query].present?
+      sql_query = "users.full_name @@ ? OR users.city @@ ?"
+      users = User.where(sql_query, "%#{params[:query]}%", "%#{params[:query]}%")
+      @dog_walkers = []
+      DogWalker.all.each do |walker|
+        if users.include?(walker.user)
+          @dog_walkers << walker
+        end
+      end
+    else
+      @dog_walkers = DogWalker.all
+    end
   end
 
   def show

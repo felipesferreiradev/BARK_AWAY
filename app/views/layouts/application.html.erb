@@ -19,9 +19,17 @@
         </a>
           <% end %>
       </div>
-      <form class="w-50 me-3" role="search">
+      <%# <form class="w-50 me-3" role="search">
         <input type="search" class="form-control rounded-pill" placeholder="Search..." aria-label="Search">
-      </form>
+      </form> %>
+      <%= form_with url: dog_walkers_path, method: :get, class: "d-flex w-50 me-3 align-items-center" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control rounded-pill p-4",
+          placeholder: "Find your buddy by city or name"
+          %>
+        <%= submit_tag "Search", class: "btn btn-primary", id: "search" %>
+      <% end %>
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
         <%= link_to "Sign in", new_user_session_path, method: :get, class: "dropdown-item" %>
