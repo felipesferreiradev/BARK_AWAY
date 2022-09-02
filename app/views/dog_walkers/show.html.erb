@@ -20,8 +20,9 @@
 
       <%= link_to "Book", new_dog_walker_booking_path(@dog_walker), class: "btn btn-primary mt-3 mx-3"%>
       <%= link_to "Back", dog_walkers_path, class: "back-btn mt-3 me-3"%>
+      <%if @dog_walker.user == current_user%>
       <%= link_to "Delete", dog_walker_path(@dog_walker), data: {turbo_method: :delete}, method: :delete, class: "delete-btn mt-3 me-2"%>
-
+      <%end%>
       </div>
     </div>
     </div>
