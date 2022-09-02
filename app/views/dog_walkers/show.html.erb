@@ -11,7 +11,7 @@
       <div class="mb-3"><span class="fs-sm text-heading fw-medium me-1" id="walker-name">
       <%= @dog_walker.user.full_name.capitalize %></span>
       </div>
-      <p id= "about-me-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quos nisi dolores quia vitae suscipit recusandae</p>
+      <p id= "about-me-content"><%= @dog_walker.description%></p>
       <ul class="nav col-md-4 list-unstyled d-flex">
         <li class="walker-city ms-1"><i class="fa-solid fa-location-dot"></i><%= @dog_walker.user.city%></li>
         <li class="walker-price ms-3"><i class="fa-solid fa-dollar-sign"></i><%= @dog_walker.price %>/h</li>
@@ -19,7 +19,9 @@
       <div class="d-flex align-content-center">
       <%= link_to "Book", new_dog_walker_booking_path(@dog_walker), class: "btn btn-primary mt-3"%>
       <%= link_to "Back", dog_walkers_path, class: "btn btn-primary mt-3"%>
-      <%= button_to "delete", dog_walker_path(@dog_walker), data: {turbo_method: :delete}, method: :delete, class: "btn btn-primary bg-danger text-white mt-3"%>
+      <%if @dog_walker.user == current_user%>
+        <%= button_to "delete", dog_walker_path(@dog_walker), data: {turbo_method: :delete}, method: :delete, class: "btn btn-primary bg-danger text-white mt-3"%>
+      <%end%>
 
       </div>
 
