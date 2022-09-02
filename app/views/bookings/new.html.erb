@@ -1,29 +1,17 @@
 <div class="container booking">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-<<<<<<< HEAD
     <h1 class="pt-5"> Hi <%=current_user.full_name %><br></h1>
     <p class="warning-message p-0 text-secondary">  *Please check the following information carefully. If something's wrong, please <%= link_to "update your profile",edit_user_registration_path, class:"btn-light"  %>*</p>
-=======
+    </div>
 
-    <h1 class="pt-5">Hi <%=current_user.full_name%><br></h1>
-
-    <h1 class="pt-5">Hi <%=current_user.full_name%>
-
-    <p class="warning-message p-0 text-secondary">  *Please check the following information carefully. If something's wrong, please <%= link_to "update your profile",edit_user_registration_path, class:"btn-light"  %>*</p>
-
-
-    <p class="p-0 text-secondary">  *Please check the following information carefully. If something's wrong, please <%= link_to "update your profile",edit_user_registration_path, class:"btn-light"  %>*</p>
-
-
->>>>>>> 9e7243744d68a0846cb474595dd8d9041604037a
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <div class="form-group d-flex gap-3">
         <div class ="booking-subtitles-input">
           <label>Your are booking a dog walk with</label>
           <p class="p-2 btn-primary text-center text-white mb-3"><%= @dog_walker.user.full_name%></p>
         </div>
       </div>
-
       <div class="text-start form-group d-flex gap-3 p-3 mt-4">
       <div>
       <label class ="booking-subtitles-input" >Tell me your name</label>
@@ -34,7 +22,6 @@
       <br><input  style="width:250px" type="email" value="<%= current_user.email%>" disabled>
       </div>
       </div>
-
       <div class="text-start form-group d-flex gap-3 p-3">
         <div>
           <label class ="booking-subtitles-input">Where can I find you? </label>
@@ -45,7 +32,6 @@
           <br><input style="width:250px" type="text" value="<%= current_user.dog_breed%>" disabled>
         </div>
       </div>
-
       <div class = "text-start booking-subtitles-input form-group p-3">
         <%= simple_form_for [@dog_walker, @booking] do |f| %>
           <%= f.error_notification %>
@@ -59,5 +45,5 @@
         <% end %>
       </div>
     </div>
-  </div>
+    </div>s
 </div>
