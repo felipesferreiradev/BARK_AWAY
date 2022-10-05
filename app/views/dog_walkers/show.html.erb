@@ -1,24 +1,29 @@
 
-<section class="container py-5">
-  <div class="row align-items-center  py-3 py-md-4">
-    <div class="col-sm-6">
-      <div class="mb-5 mb-sm-0 text-center text-sm-start">
+<section>
+  <h2 id = "about-me-title">About me</h2>
+  <div class="container about__container">
+    <div class="about__me">
+      <div class="about__me-image">
         <div class="dog-walker-pic"> <%= cl_image_tag @dog_walker.photo.key, height: 300, width: 400, crop: :fill %> </div>
       </div>
     </div>
-    <div class="col-sm-6 text-center text-sm-start ">
-      <h2 class="pb-4" id = "about-me-title">About me</h2>
-      <div class="mb-3"><span class="fs-sm text-heading fw-medium me-1" id="walker-name">
-      <%= @dog_walker.user.full_name.capitalize %></span>
+
+    <div class="about__content">
+      <div class="about__cards">
+        <article class="about__card ">
+        <div class="walker__name">
+          <%= @dog_walker.user.full_name.capitalize %>
+        </div>
+          <p id= "about-me-content"><%= @dog_walker.description%></p>
+        <ul class="list-unstyled">
+          <li class="walker-city ms-1 mb-2"><i class="fa-solid fa-location-dot"></i> <%= @dog_walker.user.city%></li>
+          <li class="walker-price ms-3"><i class="fa-solid fa-dollar-sign"></i> <%= @dog_walker.price %>/h</li>
+        </ul>
+        </article>
       </div>
-      <p id= "about-me-content"><%= @dog_walker.description%></p>
-      <ul class="nav col-md-4 list-unstyled d-flex">
-        <li class="walker-city ms-1"><i class="fa-solid fa-location-dot"></i> <%= @dog_walker.user.city%></li>
-        <li class="walker-price ms-3"><i class="fa-solid fa-dollar-sign"></i> <%= @dog_walker.price %>/h</li>
-      </ul>
       <div class="d-flex align-content-center text-align-end ">
-      <%= link_to "Book", new_dog_walker_booking_path(@dog_walker), class: "btn btn-primary mt-3 mx-3"%>
-      <%= link_to "Back", dog_walkers_path, class: "back-btn mt-3 me-3"%>
+        <%= link_to "Book", new_dog_walker_booking_path(@dog_walker), class: "book__btn"%>
+        <%= link_to "Back", dog_walkers_path, class: "back-btn"%>
       </div>
       <%if @dog_walker.user == current_user%>
       <%= button_to "Delete", dog_walker_path(@dog_walker), method: :delete, id: "new-delete", class:"delete-btn mt-3 me-3"%>

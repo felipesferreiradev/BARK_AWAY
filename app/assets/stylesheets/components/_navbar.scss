@@ -43,3 +43,13 @@ footer {
   padding: 10px;
   transform: translate(-103px, 10px);
 }
+
+.log_out {
+  color: grey;
+  border: none;
+  background-color: transparent;
+}
+
+.log_out:hover {
+  color: black;
+}

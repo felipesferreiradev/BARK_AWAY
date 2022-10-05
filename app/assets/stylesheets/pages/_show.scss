@@ -1,6 +1,50 @@
-.btn {
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.about__me {
+  width: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+}
+
+.about__me-image {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.about__card {
+  width: 75%;
+  background: lightgrey;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  padding: 2rem;
+  text-align: left;
+}
+
+.walker__name {
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.list-unstyled{
+  margin-top: 1.5rem;
+}
+
+.book__btn {
 background-color: #5BA698;
 border-color: #5BA698;
+padding: 12px;
+border-radius: 0.5rem;
+color:#fff;
+margin-top: 2rem;
 }
 
 .btn {
@@ -10,32 +54,33 @@ border-color: #5BA698;
 --bs-btn-active-border-color: #5BA698;
 }
 
-.delete-btn, .back-btn {
+.delete-btn {
 color: #BF522A;
 display: flex;
 align-items: end;
-
 }
 
 .back-btn {
-  color:#5BA698;
+color:#5BA698;
+background-color: #fff;
+border: 1px solid #5BA698;
+padding: 12px;
+border-radius: 0.5rem;
+margin-top: 2rem;
+margin-left: 0.5rem;
 }
 
 #about-me-title {
 color: grey;
 font-weight: 600;
 font-size: 36px;
-}
-
-#walker-name {
-  color: grey;
-  font-weight: 500;
-  font-size: 20px;
+margin-bottom: 2rem;
 }
 
 #about-me-content {
   color: grey;
   font-weight: 500;
+  text-align: left;
 }
 
 .fa-location-dot,

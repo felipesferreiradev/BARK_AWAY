@@ -19,9 +19,6 @@
         </a>
           <% end %>
       </div>
-      <%# <form class="w-50 me-3" role="search">
-        <input type="search" class="form-control rounded-pill" placeholder="Search..." aria-label="Search">
-      </form> %>
       <%= form_with url: dog_walkers_path, method: :get, class: "d-flex w-50 me-3 align-items-center" do %>
         <%= text_field_tag :query,
           params[:query],
@@ -31,13 +28,11 @@
         <%= submit_tag "Search", class: "btn btn-primary", id: "search" %>
       <% end %>
       <ul class="navbar-nav mr-auto">
-        <% if user_signed_in? %>
-        <%= link_to "Sign in", new_user_session_path, method: :get, class: "dropdown-item" %>
+        <% if user_signed_in?%>
         <li class="nav-item dropdown" style="margin: 0 30px;">
-           <%= cl_image_tag current_user.photo.key , class: "avatar dropdown-toggle", style: 'margin-right: 24px', id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <%= button_to "Log out", destroy_user_session_path, method: :delete %>
+            <%= button_to "Log out", destroy_user_session_path, method: :delete, class:"log_out" %>
         </li>
-          <% else %>
+        <% else %>
         <li class="nav-item active d-black">
           <%= link_to "Sign in", new_user_session_path, class: "nav-link text-white", style: "padding: 20px;" %>
         </li>

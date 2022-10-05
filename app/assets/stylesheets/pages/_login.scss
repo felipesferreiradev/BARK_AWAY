@@ -11,14 +11,22 @@
   margin-bottom: 3.5rem;
 }
 
+.form-control {
+  border-radius: 1.5rem;
+}
+
 body{
   text-align: center;
 }
 
-a{
-  // padding-bottom: 50px;
-}
-
 .btn {
   margin-bottom: 50px;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+  font-size: 0.8rem;
 }
